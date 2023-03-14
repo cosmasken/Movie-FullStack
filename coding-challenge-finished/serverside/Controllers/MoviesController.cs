@@ -83,26 +83,6 @@ namespace ServerSide.Controllers
             }
         }
 
-
-        //[HttpGet("movie/{id}")]
-        //public async Task<ActionResult<Movie>> GetMovie(int id)
-        //{
-        //    var apiKey = _config.GetValue<string>("MovieDbApiKey");
-        //    var response = await _client.GetAsync($"https://api.themoviedb.org/3/movie/{id}?api_key={apiKey}");
-        //    var json = await response.Content.ReadAsStringAsync();
-        //    var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
-        //    // var movie = JsonSerializer.Deserialize<Movie>(json, options);
-        //    var movie = JsonConvert.DeserializeObject<Movie>(json);
-
-        //    if (movie == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //    return Ok(movie);
-        //}
-
-
-
     }
 
     public class Movie
