@@ -33,6 +33,37 @@ namespace ServerSide.Controllers
             return Ok(movies);
         }
 
+        [HttpGet("upcoming")]
+        public async Task<ActionResult<IEnumerable<Movie>>> GetUpcomingMovies()
+        {
+            var apiKey = _config.GetValue<string>("MovieDbApiKey");
+            var response = await _client.GetAsync($"https://api.themoviedb.org/3/movie/upcoming?api_key={apiKey}");
+            var json = await response.Content.ReadAsStringAsync();
+            var movies = JsonConvert.DeserializeObject<MovieDbResponse>(json).Results;
+            return Ok(movies);
+        }
+
+        [HttpGet("nowplaying")]
+        public async Task<ActionResult<IEnumerable<Movie>>> GetNowPlaying()
+        {
+            var apiKey = _config.GetValue<string>("MovieDbApiKey");
+            var response = await _client.GetAsync($"https://api.themoviedb.org/3/movie/now_playing?api_key={apiKey}");
+            var json = await response.Content.ReadAsStringAsync();
+            var movies = JsonConvert.DeserializeObject<MovieDbResponse>(json).Results;
+            return Ok(movies);
+        }
+
+        [HttpGet("toprated")]
+        public async Task<ActionResult<IEnumerable<Movie>>> GetTopRated()
+        {
+            var apiKey = _config.GetValue<string>("MovieDbApiKey");
+            var response = await _client.GetAsync($"https://api.themoviedb.org/3/movie/top_rated?api_key={apiKey}");
+            var json = await response.Content.ReadAsStringAsync();
+            var movies = JsonConvert.DeserializeObject<MovieDbResponse>(json).Results;
+            return Ok(movies);
+        }
+
+
         [HttpGet("search")]
         public async Task<ActionResult<IEnumerable<Movie>>> SearchMovies(string query)
         {

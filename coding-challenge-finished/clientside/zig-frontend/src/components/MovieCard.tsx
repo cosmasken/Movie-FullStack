@@ -1,8 +1,6 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
 import { Movie } from '../types';
-import './css/MovieCard'
-import styles from "./css/MovieCard.module.css";
 
 interface Props {
   movie: Movie;
@@ -13,7 +11,7 @@ const MovieCard = ({ movie }: Props) => {
 
 <div className="movie-details">
   <div className="movie-details__poster">
-    <img src="https://via.placeholder.com/300x450" alt="Movie Poster"/>
+    <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt="Movie Poster"/>
   </div>
   <div className="movie-details__info">
     <h2 className="movie-details__title">Movie Title</h2>
