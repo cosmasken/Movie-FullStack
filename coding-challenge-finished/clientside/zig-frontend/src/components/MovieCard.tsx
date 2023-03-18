@@ -9,11 +9,11 @@ interface Props {
 const MovieCard = ({ movie }: Props) => {
   return (
 
-<div className="movie-details">
+<Card className="movie-details">
   <div className="movie-details__poster">
     <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt="Movie Poster"/>
   </div>
-  <div className="movie-details__info">
+  <Card.Body className="movie-details__info">
     <h2 className="movie-details__title">Movie Title</h2>
     <p className="movie-details__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec semper dui sit amet velit tincidunt feugiat. Nam bibendum massa eu elit tincidunt luctus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed id velit a enim aliquet gravida quis vel elit. In hac habitasse platea dictumst. Nam maximus, felis in ultricies ullamcorper, justo lectus volutpat massa, ac posuere tellus odio a dolor.</p>
     <ul className="movie-details__meta">
@@ -26,8 +26,8 @@ const MovieCard = ({ movie }: Props) => {
       <button className="movie-details__button">Watch Now</button>
       <button className="movie-details__button">Add to Watchlist</button>
     </div>
-  </div>
-</div>
+  </Card.Body>
+</Card>
 
 
     // <Card style={{ width: '100rem' }}>

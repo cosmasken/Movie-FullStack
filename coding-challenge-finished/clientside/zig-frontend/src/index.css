@@ -114,7 +114,7 @@ img {
 /* Media query for large screens */
 @media (min-width: 992px) {
   .movie-details__poster img {
-    width: calc(100% / 3);
+    width: calc(100%);
   }
 
   .movie-details__info {
