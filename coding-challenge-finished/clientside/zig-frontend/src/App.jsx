@@ -4,8 +4,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from './Home';
 import MovieDetails from './MovieDetails';
 import NotFound from './components/NotFound';
-import MovieWebsite from './MovieWebsite';
-import MovieDashboard from './components/MovieDashboard';
 
 function App() {
 
@@ -15,8 +13,7 @@ function App() {
     <div>
       <Routes>
         
-        <Route path="/" element={<MovieDashboard />} />
-        <Route path="/new" element={<MovieWebsite />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/404" element={<NotFound />} />
         <Route path="/movie/:id" element={<MovieDetails />} />
       
