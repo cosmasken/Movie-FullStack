@@ -5,6 +5,7 @@ export interface Movie {
   release_date: string;
   poster_path: string;
   popularity: number;
+  homepage: number;
   voteCount: number;
   video: boolean;
   adult: boolean;

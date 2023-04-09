@@ -20,10 +20,23 @@ const IMAGE_BASE_URL: string = 'http://image.tmdb.org/t/p/';
 const BACKDROP_SIZE: string = 'w440_and_h660_face/';
 const SEARCH_SIZE: string = 'w92/';
 
-function HomePage() {
 
-    const [popularMovies, setPopularMovies] = useState<Movie[]>([]);
+function HomePage() {
+  const [clickedIndex, setClickedIndex] = useState(1);
+ 
+const movieCategories = [
+  'Upcoming',
+  'Popular',
+  'NowPlaying',
+  'TopRated',
+];
+const handleCategoryClick = (index: number) => {
+  setClickedIndex(index);
+  setCategory(movieCategories[index])
+};
+
       const [query, setQuery] = useState("");
+      const [category, setCategory] = useState(movieCategories[1]);
       const [loading, setLoading] = useState(false);
       const [results, setResults] = useState<Movie[]>([]);
 
@@ -32,7 +45,7 @@ function HomePage() {
       );
 
       const [homeMovies, isLoading, error] = useAxios<Movie[]>(
-        `https://localhost:5001/api/popular/`
+        `https://localhost:5001/api/${category}/`
       );
       
       if (isLoading) {
@@ -117,6 +130,24 @@ function HomePage() {
           ))}
         </ListGroup>
       )}
+    <Row>
+  <Header name={'Movie Categories'} />
+  {movieCategories.map((category, index) => (
+    <Col sm={12} md={6} key={index}>
+      <ListGroup>
+      <ListGroup.Item
+                  action
+                  active={index === clickedIndex}
+                  onClick={() => handleCategoryClick(index)}
+                  style={{ backgroundColor: index === clickedIndex ? '#6c757d' : '#ffffff', color: '#000000' }}
+                >
+                  {category}
+                </ListGroup.Item>
+      </ListGroup>
+    </Col>
+  ))}
+</Row>
+
         <Row>
           <Header name={'Popular Movies'}/>
           {homeMovies.map(item => (
@@ -139,6 +170,9 @@ function HomePage() {
         
           ))}
         </Row>
+
+
+        
       </Container>
    
     </>

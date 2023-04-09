@@ -44,6 +44,21 @@ body {
 
 /* movie details */
 
+.movie-category-item {
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.movie-category-item:hover {
+  background-color: #8e8f91;
+}
+
+
+
 /* Base styles */
 
 .movie-details__info {
@@ -135,5 +150,19 @@ body {
   .movie-details__info {
     margin-left: 60px;
     margin-right: 60px;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .wrapper {
+    max-width: 600px;
+    margin: 20px auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .wrapper {
+    margin: 0;
+    border-radius: 0;
   }
 }
