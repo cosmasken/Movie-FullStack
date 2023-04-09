@@ -45,7 +45,7 @@ function HomePage() {
       
       
       if (!homeMovies) {
-        return <NotFound title="No Movies Found"/>
+        return <NotFound />
       }
 
       const handleSearch = async () => {
