@@ -193,7 +193,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/cosmasaruba) - email@arubacosmas@gmail.com
+Cosmas Aruba Ken - [@twitter_handle](https://twitter.com/cosmasaruba) - email@arubacosmas@gmail.com
 
 Project Link: [https://github.com/cosmasken/Movie-FullStack](https://github.com/cosmasken/Movie-FullStack)
 
@@ -201,7 +201,7 @@ Project Link: [https://github.com/cosmasken/Movie-FullStack](https://github.com/
 
 
 
-<!-- ACKNOWLEDGMENTS -->
+<!-- ACKNOWLEDGMENTS 
 ## Acknowledgments
 
 * []()
@@ -209,7 +209,7 @@ Project Link: [https://github.com/cosmasken/Movie-FullStack](https://github.com/
 * []()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
+-->
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
