@@ -124,7 +124,7 @@ namespace ServerSide.Controllers
         public string ReleaseDate { get; set; }
         public string Poster_path { get; set; }
         public float Popularity { get; set; }
-        public float Homepage { get; set; }
+        // public float Homepage { get; set; }
         public int Vote_count { get; set; }
         public bool Video { get; set; }
         public bool Adult { get; set; }
