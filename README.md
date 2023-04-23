@@ -34,10 +34,10 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">MovieDBApi App</h3>
 
   <p align="center">
-    project_description
+    Movie App that displays movies from the movie db api
     <br />
     <a href="https://github.com/cosmasken/Movie-FullStack"><strong>Explore the docs »</strong></a>
     <br />
@@ -85,7 +85,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+Movie App that displays movies from the movie db api
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -95,12 +95,7 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 * [![Next][Next.js]][Next-url]
 * [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -109,7 +104,6 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
@@ -122,18 +116,25 @@ This is an example of how to list things you need to use the software and how to
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
+1. Get a free API Key at [(https://developers.themoviedb.org/]((https://developers.themoviedb.org/)
 2. Clone the repo
    ```sh
    git clone https://github.com/cosmasken/Movie-FullStack.git
    ```
-3. Install NPM packages
+3. cd into ./clientside/zig-movie-app directory for client-side code
+4. Install NPM packages
    ```sh
    npm install
    ```
-4. Enter your API in `config.js`
+5. cd into ./serverside for web api server-side code
+ 
+6. Install DOTNET packages
+   ```sh
+   dotnet restore
+   ```
+7. Enter your API in `appsettings.json` in serverside
    ```js
-   const API_KEY = 'ENTER YOUR API';
+   "MovieDbApiKey": "YOUR API",
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
